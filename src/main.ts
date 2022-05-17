@@ -4,7 +4,22 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
+export type LangTranslator = (
+  key: string,
+  ...params: Array<string | number>
+) => string;
+
+function t(key: string, ...params: Array<string | number>): string {
+  return vuetify.framework.lang.t(`$vuetify.${key}`, ...params);
+}
+declare module "vue/types/vue" {
+  export interface Vue {
+    $t: LangTranslator;
+  }
+}
+
+Vue.prototype.$t = t;
 
 new Vue({
   router,
