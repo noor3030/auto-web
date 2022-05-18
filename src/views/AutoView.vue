@@ -1,17 +1,20 @@
 <template>
   <div>
-    <v-container class="nav pa-7" fluid>
+    <v-container class="nav pa-7 " fluid>
       <v-row justify="space-between">
-        <v-col>
+        <v-col cols="6">
           <div class="container1 py-7 text-center">
             <v-row align="center" justify="space-around">
+              <v-btn color="#276ef1" flat class="pa-5 white--text" small>
+                <v-icon v-if="$vuetify.rtl === true">mdi-chevron-right</v-icon>
+                <v-icon v-else>mdi-chevron-left </v-icon>
+
+                {{ $t("startUsingTheApp") }}
+              </v-btn>
               <v-btn color="#276ef1" flat class="pa-5 white--text" small>
                 {{ $t("privacyPolicy") }} </v-btn
               ><v-btn color="#276ef1" flat class="pa-5 white--text" small>
                 {{ $t("termsAndConditions") }}
-              </v-btn>
-              <v-btn color="#276ef1" flat class="pa-5 white--text" small>
-                {{ $t("startUsingTheApp") }}
               </v-btn>
             </v-row>
           </div>
@@ -26,7 +29,7 @@
             }}</v-btn></v-row
           >
         </v-col>
-        <v-col>
+        <v-col cols="5">
           <v-row justify="end">
             <v-menu offset-y>
               <template v-slot:activator="{ on, attrs }">
@@ -65,26 +68,29 @@
           ></v-img>
         </v-col>
       </v-row>
-      <v-row>
+    </v-container>
+    <v-col class="pa-10"
+      ><v-row>
         <div>
-          <v-btn color="#276ef1" dark absolute bottom fab large>
+          <v-btn color="#276ef1" dark absolute fab large>
             <v-icon>mdi-phone</v-icon>
           </v-btn>
         </div></v-row
       >
       <v-row>
-        <div class="services-div" style="float: right; font-size: 30px">
+        <div class="services-div mt-10" style="float: right; font-size: 30px">
           <h1>{{ $t("ourServices") }}</h1>
         </div></v-row
-      >
-      <CardServices />
-    </v-container>
+      ></v-col
+    >
+    <CardServices />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import CardServices from "@/components/CardServices.vue";
+
 export default Vue.extend({
   data() {
     return {
@@ -110,7 +116,7 @@ export default Vue.extend({
 
 .nav {
   background-color: #276ef1;
-  height: 720px;
+  height: 700px;
 }
 .container1 {
   background-color: #fff;
@@ -119,7 +125,7 @@ export default Vue.extend({
 h4,
 h1,
 p {
-  font-family: "Montserrat";
+  font-family: "Tajawal", sans-serif;
 
   color: #434d5c;
 }
@@ -129,13 +135,13 @@ p {
 .auto-row {
   margin-top: 100px;
   font-size: 200px;
-  font-family: "Montserrat";
+  font-family: "Tajawal", sans-serif;
 }
 .v-btn__content {
   color: grey darken-2;
-  font-family: "Montserrat";
+  font-family: "Tajawal", sans-serif;
   text-transform: capitalize;
-  font-weight: bold;
+
   font-size: 20px;
 }
 .services-div {

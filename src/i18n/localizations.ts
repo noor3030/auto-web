@@ -21,4 +21,5 @@ export interface VuetifyLocale {
     solutionInButton:string
     bestChoice:string
     toSolveProblem:string
+    
   }

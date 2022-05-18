@@ -12,6 +12,7 @@ const local: localizations = {
   startUsingTheApp: "ابدأ باستخدام التطبيق",
   downloadTheApp: "حمل التطبيق",
   ourServices: "خدماتنا",
+  
   manImg: "24/7",
   carImg: "حياتك اسهل",
   familyImg: "خليك بأمان",

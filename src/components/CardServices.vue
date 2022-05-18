@@ -1,5 +1,5 @@
 <template >
-  <v-row class="pl-9" justify="space-between">
+  <v-row  justify="space-between" class="px-10 py-16">
     <v-col cols="4"
       ><v-card elevation="5">
         <v-card-actions class="justify-center">
