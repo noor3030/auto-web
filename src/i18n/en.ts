@@ -36,5 +36,8 @@ const local: localizations = {
   airports: "Airports",
   cities: "Cities",
   helpCenter: " «the help center»",
+  privacy: "Privacy",
+  features: "Features and amenities for people with special needs",
+  theConditions: "The conditions",
 };
 export default local;

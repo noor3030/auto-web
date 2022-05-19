@@ -36,5 +36,8 @@ export interface VuetifyLocale {
     airports:string
     cities:string
     helpCenter:string
+    privacy:string
+    features :string
+    theConditions:string
 
   }
