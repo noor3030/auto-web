@@ -21,5 +21,20 @@ export interface VuetifyLocale {
     solutionInButton:string
     bestChoice:string
     toSolveProblem:string
-    
+    goTo:string
+    products:string
+    cars:string
+    electrician:string
+    peasant:string
+    autoCommunity:string
+    company:string
+    newsroom:string
+    investors:string
+    blog:string
+    baghdad:string
+    movingFrom:string
+    airports:string
+    cities:string
+    helpCenter:string
+
   }

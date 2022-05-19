@@ -6,7 +6,7 @@
           <div class="container1 py-7 text-center">
             <v-row align="center" justify="space-around">
               <v-btn color="#276ef1" flat class="pa-5 white--text" small>
-                <v-icon v-if="$vuetify.rtl === true">mdi-chevron-right</v-icon>
+                <v-icon  v-if="$vuetify.rtl=== true">mdi-chevron-right</v-icon>
                 <v-icon v-else>mdi-chevron-left </v-icon>
 
                 {{ $t("startUsingTheApp") }}

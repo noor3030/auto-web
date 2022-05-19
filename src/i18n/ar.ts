@@ -12,7 +12,7 @@ const local: localizations = {
   startUsingTheApp: "ابدأ باستخدام التطبيق",
   downloadTheApp: "حمل التطبيق",
   ourServices: "خدماتنا",
-  
+
   manImg: "24/7",
   carImg: "حياتك اسهل",
   familyImg: "خليك بأمان",
@@ -22,6 +22,21 @@ const local: localizations = {
   solutionInButton: "خدمات اوتو تلكه الحل بدكمه",
   bestChoice: "اوتو الخيار الافضل",
   toSolveProblem: "لحل المشكلة بدون ماتتعب وتدوخ",
+  goTo: "انتقل الى",
+  products: "المنتجات",
+  cars: "السيارات",
+  electrician: "كهربائي",
+  peasant: "فلاح",
+  autoCommunity: "مجتمع اوتو",
+  company: "الشركة",
+  newsroom: "غرفة الاخبار",
+  investors: "المستثمرون",
+  blog: "المدونة",
+  baghdad: "بغداد",
+  movingFrom: "الانتقال من مكان الى اخر",
+  airports: "المطارات",
+  cities: "المدن",
+  helpCenter: "«مركز المساعدة»",
 };
 
 export default local;
