@@ -52,7 +52,7 @@
             <v-icon color="#fff">mdi-map-marker</v-icon>
           </v-row>
         </v-col>
-        <v-col>
+        <v-col >
           <v-img src="../assets/play.png" width="300"></v-img>
         </v-col>
       </v-row>

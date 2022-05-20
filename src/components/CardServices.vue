@@ -1,6 +1,7 @@
 <template >
   <v-row  justify="space-between" class="px-10 py-16">
-    <v-col cols="4"
+    
+    <v-col cols="12" md="4"
       ><v-card elevation="5">
         <v-card-actions class="justify-center">
           <v-img src="../assets/2.svg"></v-img>
@@ -20,7 +21,7 @@
         </v-card-text>
       </v-card></v-col
     >
-    <v-col cols="4">
+    <v-col cols="12" md="4">
       <v-card elevation="5">
         <v-card-actions class="justify-center">
           <v-img src="../assets/3.svg" class="car-img"></v-img>
@@ -40,7 +41,7 @@
         </v-card-text>
       </v-card></v-col
     >
-    <v-col cols="4">
+    <v-col cols="12" md="4">
       <v-card elevation="5">
         <v-card-actions class="justify-center">
           <v-img src="../assets/1.svg"></v-img>
