@@ -39,7 +39,8 @@ const local: localizations = {
   helpCenter: "«مركز المساعدة»",
   privacy:"الخصوصية",
   features:"الميزات والتجهيزات لذوي الاحتياجات الخاصة",
-  theConditions:"الشروط"
+  theConditions:"الشروط",
+  aboutAuto:"حول اوتو"
 };
 
 export default local;

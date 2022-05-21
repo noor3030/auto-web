@@ -39,5 +39,6 @@ export interface VuetifyLocale {
     privacy:string
     features :string
     theConditions:string
+    aboutAuto:string
 
   }

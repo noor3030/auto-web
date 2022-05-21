@@ -67,10 +67,10 @@
           </v-col>
           <v-col cols="12" md="5">
             <v-img
-              v-show="$vuetify.breakpoint.xlOnly"
+            
               src="../assets/Group 7281.svg"
               width="400"
-              class="phone-img"
+              class="phone-img d-sm-none d-md-flex"
             ></v-img>
           </v-col>
         </v-row>
@@ -84,11 +84,7 @@
           </v-btn>
         </div></v-row
       >
-      <v-row>
-        <div class="services-div" style="float: right">
-          <h1>{{ $t("ourServices") }}</h1>
-        </div></v-row
-      ></v-col
+     </v-col
     >
     <CardServices />
   </div>
@@ -146,9 +142,5 @@ p {
   text-transform: capitalize;
   font-size: 20px;
 }
-.services-div {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  font-size: 1.5vw;
-}
+
 </style>
