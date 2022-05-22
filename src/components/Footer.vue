@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="#000" class="pa-16">
+  <v-footer color="#000" class="pa-16 mt-16">
     <v-col>
       <v-row class="pb-10">
         <h1 class="white--text">{{ $t("appName") }}</h1>

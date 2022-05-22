@@ -15,22 +15,26 @@
                   {{ $t("startUsingTheApp") }}
                 </v-btn>
 
-                <v-btn color="#276ef1" flat class="pa-5 white--text" small>
+                <v-btn
+                  color="#276ef1"
+                  flat
+                  class="pa-5 white--text"
+                  small
+                  to="/privacy_policy"
+                >
                   {{ $t("privacyPolicy") }}
                 </v-btn>
-                <v-btn color="#276ef1" flat class="pa-5 white--text" small>
+                <v-btn color="#276ef1" flat class="pa-5 white--text" small to="/terms">
                   {{ $t("termsAndConditions") }}
                 </v-btn>
               </v-row>
             </div></v-col
           >
-          <v-col cols="12" md="6" >
+          <v-col cols="12" md="6">
             <v-row justify="end">
               <v-menu offset-y>
                 <template v-slot:activator="{ on, attrs }">
-                 
                   <v-btn
-                   
                     rounded
                     text
                     v-bind="attrs"
@@ -67,7 +71,6 @@
           </v-col>
           <v-col cols="12" md="5">
             <v-img
-            
               src="../assets/Group 7281.svg"
               width="400"
               class="phone-img d-sm-none d-md-flex"
@@ -84,16 +87,16 @@
           </v-btn>
         </div></v-row
       >
-     </v-col
-    >
+    </v-col>
     <CardServices />
+     <Footer/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import CardServices from "@/components/CardServices.vue";
-
+import Footer from "@/components/Footer.vue";
 export default Vue.extend({
   data() {
     return {
@@ -111,6 +114,7 @@ export default Vue.extend({
   },
   components: {
     CardServices,
+    Footer
   },
 });
 </script>
@@ -142,5 +146,4 @@ p {
   text-transform: capitalize;
   font-size: 20px;
 }
-
 </style>

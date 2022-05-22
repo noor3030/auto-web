@@ -1,7 +1,7 @@
 <template >
   <v-col class="cards">
     <v-row class="px-5">
-      <h1>{{ $t("aboutAuto") }}</h1>
+      <h1 >{{ $t("aboutAuto") }}</h1>
     </v-row>
     <v-row class="px-5">
       <v-col cols="12" md="4"
