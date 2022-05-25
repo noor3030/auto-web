@@ -5,7 +5,7 @@ const local: localizations = {
   ...ar,
   appName: "اوتو",
   arabic: "العربية",
-  english: "الانكيزية",
+  english: "الانكليزية",
   language: "اللغة",
   privacyPolicy: "سياسة الخصوصية",
   termsAndConditions: "الشروط والاحكام",

@@ -1,9 +1,8 @@
 <template>
-  <v-app>
+  <v-app style="background-color: #eef3fe">
     <v-main>
       <router-view />
     </v-main>
-   
   </v-app>
 </template>
 
@@ -18,10 +17,10 @@ export default Vue.extend({
   }),
   computed: {
     hide() {
-      return this.$route.path !== "/privacy_policy" 
+      return this.$route.path !== "/privacy_policy";
     },
   },
-  components: {  },
+  components: {},
 });
 </script>
 <style>
