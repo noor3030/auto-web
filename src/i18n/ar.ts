@@ -37,10 +37,13 @@ const local: localizations = {
   airports: "المطارات",
   cities: "المدن",
   helpCenter: "«مركز المساعدة»",
-  privacy:"الخصوصية",
-  features:"الميزات والتجهيزات لذوي الاحتياجات الخاصة",
-  theConditions:"الشروط",
-  aboutAuto:"حول اوتو"
+  privacy: "الخصوصية",
+  features: "الميزات والتجهيزات لذوي الاحتياجات الخاصة",
+  theConditions: "الشروط",
+  aboutAuto: "حول اوتو",
+  chooseYourLanguage: "اختر لغتك",
+  safety: "السلامة",
+  diversity: "التنوع وعدم التمييز"
 };
 
 export default local;

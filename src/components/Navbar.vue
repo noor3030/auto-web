@@ -32,12 +32,14 @@
           </v-btn>
         </div>
         <v-col cols="12">
-          <v-row justify="center"> <h1 >اختر لغتك</h1></v-row>
+          <v-row justify="center">
+            <h1>{{ $t("chooseYourLanguage") }}</h1></v-row
+          >
 
           <v-row justify="center">
             <div v-for="(item, index) in items" :key="index">
               <v-btn @click="changeLanguage(item)" text>
-                <h1 style="font-size:50px">{{ item.title }}</h1>
+                <h1 style="font-size: 50px">{{ item.title }}</h1>
               </v-btn>
             </div></v-row
           ></v-col
@@ -54,7 +56,7 @@ export default Vue.extend({
     changeLanguage(item: { language: string; rtl: boolean; title: string }) {
       this.$vuetify.rtl = item.rtl;
       this.$vuetify.lang.current = item.language;
-      this.dialog=false
+      this.dialog = false;
     },
   },
   data() {

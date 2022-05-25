@@ -29,7 +29,7 @@
     <v-col class="pa-16"
       ><v-row>
         <div>
-          <v-btn color="#000" dark fixed fab large>
+          <v-btn color="#000" dark fixed fab large >
             <v-icon>mdi-phone</v-icon>
           </v-btn>
         </div></v-row

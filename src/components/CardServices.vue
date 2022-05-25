@@ -5,7 +5,7 @@
     </v-row>
     <v-row class="px-5">
       <v-col cols="12" md="4"
-        ><v-card flat>
+        ><v-card flat color="#eef3fe">
           <v-card-actions class="justify-center">
             <v-img src="../assets/2.svg"></v-img>
           </v-card-actions>
@@ -25,7 +25,7 @@
         </v-card></v-col
       >
       <v-col cols="12" md="4">
-        <v-card flat>
+        <v-card flat color="#eef3fe">
           <v-card-actions class="justify-center">
             <v-img src="../assets/3.svg" class="car-img"></v-img>
           </v-card-actions>
@@ -45,7 +45,7 @@
         </v-card></v-col
       >
       <v-col cols="12" md="4">
-        <v-card flat>
+        <v-card flat color="#eef3fe">
           <v-card-actions class="justify-center">
             <v-img src="../assets/1.svg"></v-img>
           </v-card-actions>
@@ -70,9 +70,9 @@
     </v-row>
     <v-row class="px-5">
       <v-col cols="12" md="4">
-        <v-card flat>
+        <v-card flat color="#eef3fe">
           <v-card-actions class="justify-center">
-            <v-img src="../assets/car.svg"></v-img>
+            <v-img src="../assets/car.svg" max-width="200"></v-img>
           </v-card-actions>
 
           <v-card-title class="justify-center">
@@ -81,9 +81,9 @@
         >
       </v-col>
       <v-col cols="12" md="4">
-        <v-card flat>
+        <v-card flat color="#eef3fe">
           <v-card-actions class="justify-center">
-            <v-img src="../assets/Electrician.svg" ></v-img>
+            <v-img src="../assets/Electrician.svg" max-width="200"></v-img>
           </v-card-actions>
 
           <v-card-title class="justify-center">
@@ -92,9 +92,9 @@
         >
       </v-col>
       <v-col cols="12" md="4">
-        <v-card flat>
+        <v-card flat color="#eef3fe">
           <v-card-actions class="justify-center">
-            <v-img src="../assets/peasant.svg"></v-img>
+            <v-img src="../assets/peasant.svg" max-width="200"></v-img>
           </v-card-actions>
 
           <v-card-title class="justify-center">

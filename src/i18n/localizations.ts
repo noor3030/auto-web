@@ -40,5 +40,7 @@ export interface VuetifyLocale {
     features :string
     theConditions:string
     aboutAuto:string
-
+    chooseYourLanguage:string
+    safety:string
+    diversity:string
   }
