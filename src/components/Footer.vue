@@ -182,6 +182,7 @@ a:link {
     font-size: 20px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .app-name {
     font-size: 50px;
