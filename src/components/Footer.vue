@@ -2,80 +2,17 @@
   <v-footer color="#000" class="mt-16">
     <v-col class="footer">
       <v-row class="pb-10">
-        <h1 class="white--text">{{ $t("appName") }}</h1>
+        <h1 class="white--text pa-0 app-name">{{ $t("appName") }}</h1>
       </v-row>
       <v-row class="pb-16">
-        <v-btn class="white--text hover-underline-animation" text>
+        <v-btn class="white--text hover-underline-animation pa-0" text>
           {{ $t("goTo") }} {{ $t("helpCenter") }}</v-btn
         ></v-row
       >
-      <v-row class="pb-16">
-        <v-col cols="12" md="3">
-          <h2 class="white--text pb-5">{{ $t("company") }}</h2>
-          <div>
-            <v-btn text class="white--text  no-background-hover"
-              ><span id="hover-span">{{ $t("newsroom") }}</span></v-btn
-            >
-          </div>
-          <div>
-            <v-btn text class="white--text  no-background-hover">
-              <span id="hover-span">{{ $t("investors") }}</span></v-btn
-            >
-          </div>
-          <div>
-            <v-btn text class="white--text  no-background-hover"
-              ><span id="hover-span">{{ $t("blog") }}</span></v-btn
-            >
-          </div>
-        </v-col>
-        <v-col cols="12" md="3">
-          <h2 class="white--text pb-5">{{ $t("products") }}</h2>
-          <div>
-            <v-btn text class="white--text  no-background-hover"
-              ><span id="hover-span">{{ $t("cars") }}</span></v-btn
-            >
-          </div>
-          <div>
-            <v-btn text class="white--text  no-background-hover"
-              ><span id="hover-span">{{ $t("electrician") }}</span></v-btn
-            >
-          </div>
-          <div>
-            <v-btn text class="white--text  no-background-hover"
-              ><span id="hover-span">{{ $t("peasant") }}</span></v-btn
-            >
-          </div>
-        </v-col>
-        <v-col cols="12" md="3"
-          ><h2 class="white--text pb-5">{{ $t("autoCommunity") }}</h2>
-          <div>
-            <v-btn text class="white--text no-background-hover "
-              ><span id="hover-span">{{ $t("safety") }}</span></v-btn
-            >
-          </div>
-          <div>
-            <v-btn text class="white--text no-background-hover "
-              ><span id="hover-span">{{ $t("diversity") }}</span></v-btn
-            >
-          </div>
-        </v-col>
-        <v-col cols="12" md="3"
-          ><h2 class="white--text pb-5">{{ $t("movingFrom") }}</h2>
-          <div>
-            <v-btn text class="white--text no-background-hover "
-              ><span id="hover-span">{{ $t("airports") }}</span></v-btn
-            >
-          </div>
-          <div>
-            <v-btn text class="white--text no-background-hover "
-              ><span id="hover-span">{{ $t("cities") }}</span></v-btn
-            >
-          </div>
-        </v-col>
-      </v-row>
+      <FooterInfo />
       <v-row class="pb-16 pt-16" justify="space-between">
         <v-col cols="12" md="4">
-          <v-row justify="space-between">
+          <v-row justify="space-between" class="pa-0">
             <v-btn icon><v-icon color="#fff">mdi-facebook</v-icon></v-btn>
             <v-btn icon><v-icon color="#fff">mdi-twitter</v-icon></v-btn>
             <v-btn icon><v-icon color="#fff">mdi-youtube</v-icon></v-btn>
@@ -83,10 +20,10 @@
             <v-btn icon><v-icon color="#fff">mdi-instagram</v-icon></v-btn>
           </v-row>
         </v-col>
-        <v-col cols="12" md="4">
+        <v-col cols="12" md="4" class="lang-col">
           <v-row justify="center">
             <v-dialog
-              v-model="dialog"
+              v-model="languageDialog"
               fullscreen
               transition="dialog-bottom-transition"
             >
@@ -102,9 +39,14 @@
                   <v-icon medium class="ms-1" color="#fff">mdi-web</v-icon>
                 </v-btn>
               </template>
-              <v-card>
+              <v-card color="#eef3fe">
                 <div class="pa-16 text-center">
-                  <v-btn icon @click="dialog = false" x-large color="#000">
+                  <v-btn
+                    icon
+                    @click="languageDialog = false"
+                    x-large
+                    color="#000"
+                  >
                     <v-icon x-large>mdi-close</v-icon>
                   </v-btn>
                 </div>
@@ -116,7 +58,7 @@
                   <v-row justify="center">
                     <div v-for="(item, index) in items" :key="index">
                       <v-btn @click="changeLanguage(item)" text>
-                        <h1 style="font-size: 50px">{{ item.title }}</h1>
+                        <h1>{{ item.title }}</h1>
                       </v-btn>
                     </div></v-row
                   ></v-col
@@ -134,12 +76,25 @@
           </v-row>
         </v-col>
         <v-col cols="12" md="4">
-          <v-row>
+          <v-row v-if="$vuetify.breakpoint.md || $vuetify.breakpoint.xl">
             <v-btn text flat
               ><v-img src="../assets/play.svg" max-width="250"></v-img
             ></v-btn>
             <v-btn text flat>
               <v-img src="../assets/store.svg" max-width="200"></v-img>
+            </v-btn>
+            ></v-row
+          >
+          <v-row
+            v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+            justify="center"
+            class="pt-8"
+          >
+            <v-btn icon flat class="mx-5"
+              ><v-img src="../assets/play-logo.svg" max-width="50"></v-img
+            ></v-btn>
+            <v-btn icon flat>
+              <v-img src="../assets/apple-logo.svg" max-width="50"></v-img>
             </v-btn>
             ></v-row
           >
@@ -154,22 +109,26 @@
 
 <script lang="ts">
 import Vue from "vue";
+import FooterInfo from "@/components/FooterInfo.vue";
 export default Vue.extend({
   methods: {
     changeLanguage(item: { language: string; rtl: boolean; title: string }) {
       this.$vuetify.rtl = item.rtl;
       this.$vuetify.lang.current = item.language;
-      this.dialog = false;
+      this.languageDialog = false;
     },
   },
   data() {
     return {
-      dialog: false,
+      languageDialog: false,
       items: [
         { language: "ar", rtl: true, title: "العربية" },
         { language: "en", rtl: false, title: "English" },
       ],
     };
+  },
+  components: {
+    FooterInfo,
   },
 });
 </script>
@@ -210,21 +169,23 @@ p {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.no-background-hover::before {
-  background-color: transparent !important;
-}
-#hover-span:hover {
-  color: gray;
-}
 a:link {
   text-decoration: none;
 }
-.footer {
-  padding: 100px;
+@media screen and (max-width: 600px) {
+  .lang-col {
+    padding-top: 50px;
+  }
 }
 @media screen and (max-width: 600px) {
-  .footer {
-    padding: 10px;
+  h1 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .app-name {
+    font-size: 50px;
+   
   }
 }
 </style>
