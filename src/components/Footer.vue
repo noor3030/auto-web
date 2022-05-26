@@ -90,13 +90,12 @@
             justify="center"
             class="pt-8"
           >
-            <v-btn icon flat class="mx-5"
-              ><v-img src="../assets/play-logo.svg" max-width="50"></v-img
+            <v-btn icon flat class="mx-5"><v-img src="../assets/play-logo.svg" max-width="50"></v-img
             ></v-btn>
             <v-btn icon flat>
               <v-img src="../assets/apple-logo.svg" max-width="50"></v-img>
             </v-btn>
-            ></v-row
+            </v-row
           >
         </v-col>
       </v-row>

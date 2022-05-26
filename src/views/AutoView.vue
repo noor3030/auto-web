@@ -29,13 +29,27 @@
     <v-col class="pa-16"
       ><v-row>
         <div>
-          <v-btn color="#000" dark fixed fab large >
+          <v-btn color="#000" dark fixed fab large class="d-none d-sm-block">
             <v-icon>mdi-phone</v-icon>
           </v-btn>
         </div></v-row
       >
     </v-col>
     <CardServices />
+    <v-row>
+      <div>
+        <v-btn
+          color="#000"
+          dark
+          large
+          fab
+          class="mx-6"
+          v-if="$vuetify.breakpoint.xsOnly"
+        >
+          <v-icon>mdi-phone</v-icon>
+        </v-btn>
+      </div></v-row
+    >
     <Footer />
   </div>
 </template>
@@ -59,7 +73,6 @@ export default Vue.extend({
 .nav {
   background-color: #000;
   height: 700px;
-  
 }
 .container1 {
   background-color: #fff;
