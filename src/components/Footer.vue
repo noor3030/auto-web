@@ -1,6 +1,6 @@
 <template>
   <v-footer color="#000" class="mt-16">
-    <v-col>
+    <v-col class="footer">
       <v-row class="pb-10">
         <h1 class="white--text">{{ $t("appName") }}</h1>
       </v-row>
@@ -13,20 +13,17 @@
         <v-col cols="12" md="3">
           <h2 class="white--text pb-5">{{ $t("company") }}</h2>
           <div>
-            <v-btn
-              text
-              class="white--text pa-0 no-background-hover"
-              :ripple="false"
+            <v-btn text class="white--text  no-background-hover"
               ><span id="hover-span">{{ $t("newsroom") }}</span></v-btn
             >
           </div>
           <div>
-            <v-btn text class="white--text pa-0 no-background-hover">
+            <v-btn text class="white--text  no-background-hover">
               <span id="hover-span">{{ $t("investors") }}</span></v-btn
             >
           </div>
           <div>
-            <v-btn text class="white--text pa-0 no-background-hover"
+            <v-btn text class="white--text  no-background-hover"
               ><span id="hover-span">{{ $t("blog") }}</span></v-btn
             >
           </div>
@@ -34,17 +31,17 @@
         <v-col cols="12" md="3">
           <h2 class="white--text pb-5">{{ $t("products") }}</h2>
           <div>
-            <v-btn text class="white--text pa-0 no-background-hover"
+            <v-btn text class="white--text  no-background-hover"
               ><span id="hover-span">{{ $t("cars") }}</span></v-btn
             >
           </div>
           <div>
-            <v-btn text class="white--text pa-0 no-background-hover"
+            <v-btn text class="white--text  no-background-hover"
               ><span id="hover-span">{{ $t("electrician") }}</span></v-btn
             >
           </div>
           <div>
-            <v-btn text class="white--text pa-0 no-background-hover"
+            <v-btn text class="white--text  no-background-hover"
               ><span id="hover-span">{{ $t("peasant") }}</span></v-btn
             >
           </div>
@@ -52,12 +49,12 @@
         <v-col cols="12" md="3"
           ><h2 class="white--text pb-5">{{ $t("autoCommunity") }}</h2>
           <div>
-            <v-btn text class="white--text no-background-hover pa-0"
+            <v-btn text class="white--text no-background-hover "
               ><span id="hover-span">{{ $t("safety") }}</span></v-btn
             >
           </div>
           <div>
-            <v-btn text class="white--text no-background-hover pa-0"
+            <v-btn text class="white--text no-background-hover "
               ><span id="hover-span">{{ $t("diversity") }}</span></v-btn
             >
           </div>
@@ -65,12 +62,12 @@
         <v-col cols="12" md="3"
           ><h2 class="white--text pb-5">{{ $t("movingFrom") }}</h2>
           <div>
-            <v-btn text class="white--text no-background-hover pa-0"
+            <v-btn text class="white--text no-background-hover "
               ><span id="hover-span">{{ $t("airports") }}</span></v-btn
             >
           </div>
           <div>
-            <v-btn text class="white--text no-background-hover pa-0"
+            <v-btn text class="white--text no-background-hover "
               ><span id="hover-span">{{ $t("cities") }}</span></v-btn
             >
           </div>
@@ -137,33 +134,19 @@
           </v-row>
         </v-col>
         <v-col cols="12" md="4">
-          <v-img src="../assets/play.png" width="300"></v-img>
+          <v-row>
+            <v-btn text flat
+              ><v-img src="../assets/play.svg" max-width="250"></v-img
+            ></v-btn>
+            <v-btn text flat>
+              <v-img src="../assets/store.svg" max-width="200"></v-img>
+            </v-btn>
+            ></v-row
+          >
         </v-col>
       </v-row>
       <v-row>
         <v-col> <p class="grey--text">Auto Technologies Inc 2022</p></v-col>
-        <v-col>
-          <v-row>
-            <v-col
-              ><v-btn
-                class="grey--text no-background-hover"
-                text
-                to="/privacy_policy"
-                ><span id="hover-span">{{ $t("privacy") }}</span></v-btn
-              ></v-col
-            >
-            <v-col
-              ><v-btn class="grey--text no-background-hover" text
-                ><span id="hover-span">{{ $t("features") }}</span></v-btn
-              ></v-col
-            >
-            <v-col
-              ><v-btn class="grey--text no-background-hover" text to="/terms"
-                ><span id="hover-span">{{ $t("theConditions") }}</span></v-btn
-              ></v-col
-            >
-          </v-row>
-        </v-col>
       </v-row>
     </v-col>
   </v-footer>
@@ -235,5 +218,13 @@ p {
 }
 a:link {
   text-decoration: none;
+}
+.footer {
+  padding: 100px;
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    padding: 10px;
+  }
 }
 </style>

@@ -1,33 +1,86 @@
 <template>
-  <v-app-bar color="#fff">
-    <v-row>
-      <v-btn color="#000" text rounded>
+  <v-app-bar color="#eef3fe">
+    <v-row v-if="$vuetify.breakpoint.xl">
+      <v-btn color="#000" text rounded class="hide-element">
         <v-icon v-if="$vuetify.rtl === true">mdi-chevron-right</v-icon>
         <v-icon v-else>mdi-chevron-left </v-icon>
 
         {{ $t("startUsingTheApp") }}
       </v-btn>
 
-      <v-btn color="#000" text to="/privacy_policy" rounded>
+      <v-btn
+        color="#000"
+        text
+        to="/privacy_policy"
+        rounded
+        class="hide-element"
+      >
         {{ $t("privacyPolicy") }}
       </v-btn>
-      <v-btn color="#000" text to="/terms" rounded>
+      <v-btn color="#000" text to="/terms" rounded class="hide-element">
         {{ $t("termsAndConditions") }}
-      </v-btn></v-row
-    >
+      </v-btn>
+    </v-row>
+    <v-row v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm">
+      <v-dialog
+        v-model="navDialog"
+        fullscreen
+        transition="dialog-top-transition"
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn v-bind="attrs" v-on="on" icon>
+            <v-icon medium class="ms-1" color="#000">mdi-chevron-down </v-icon>
+          </v-btn>
+        </template>
+        <v-card color="#eef3fe">
+          <div class="pa-16 text-center">
+            <v-btn icon @click="navDialog = false" x-large color="#000">
+              <v-icon x-large>mdi-close</v-icon>
+            </v-btn>
+          </div>
+          <v-row align="center" justify="center">
+            <v-col align-self="center" cols="12">
+              <v-btn color="#000" text rounded>
+                <v-icon v-if="$vuetify.rtl === true" class="d-none d-sm-flex"
+                  >mdi-chevron-right</v-icon
+                >
+                <v-icon v-else class="d-none d-sm-flex"
+                  >mdi-chevron-left
+                </v-icon>
 
+                {{ $t("startUsingTheApp") }}
+              </v-btn>
+            </v-col>
+            <v-col align-self="center" cols="12">
+              <v-btn color="#000" text to="/privacy_policy" rounded>
+                {{ $t("privacyPolicy") }}
+              </v-btn></v-col
+            >
+            <v-col align-self="center" cols="12"
+              ><v-btn color="#000" text to="/terms" rounded>
+                {{ $t("termsAndConditions") }}
+              </v-btn></v-col
+            >
+          </v-row>
+        </v-card>
+      </v-dialog></v-row
+    >
     <v-spacer></v-spacer>
 
-    <v-dialog v-model="dialog" fullscreen transition="dialog-top-transition">
+    <v-dialog
+      v-model="languageDialog"
+      fullscreen
+      transition="dialog-top-transition"
+    >
       <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on" rounded text>
-          {{ $t("language") }}
+          <span class="d-none d-sm-flex">{{ $t("language") }}</span>
           <v-icon medium class="ms-1" color="#000">mdi-web</v-icon>
         </v-btn>
       </template>
-      <v-card>
+      <v-card color="#eef3fe"> 
         <div class="pa-16 text-center">
-          <v-btn icon @click="dialog = false" x-large color="#000">
+          <v-btn icon @click="languageDialog = false" x-large color="#000">
             <v-icon x-large>mdi-close</v-icon>
           </v-btn>
         </div>
@@ -39,7 +92,7 @@
           <v-row justify="center">
             <div v-for="(item, index) in items" :key="index">
               <v-btn @click="changeLanguage(item)" text>
-                <h1 style="font-size: 50px">{{ item.title }}</h1>
+                <h1>{{ item.title }}</h1>
               </v-btn>
             </div></v-row
           ></v-col
@@ -56,12 +109,13 @@ export default Vue.extend({
     changeLanguage(item: { language: string; rtl: boolean; title: string }) {
       this.$vuetify.rtl = item.rtl;
       this.$vuetify.lang.current = item.language;
-      this.dialog = false;
+      this.languageDialog = false;
     },
   },
   data() {
     return {
-      dialog: false,
+      navDialog: false,
+      languageDialog: false,
       items: [
         { language: "ar", rtl: true, title: "العربية" },
         { language: "en", rtl: false, title: "English" },
@@ -73,5 +127,10 @@ export default Vue.extend({
 <style>
 .v-btn__content {
   font-family: "Tajawal", sans-serif;
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
 }
 </style>

@@ -59,6 +59,7 @@ export default Vue.extend({
 .nav {
   background-color: #000;
   height: 700px;
+  
 }
 .container1 {
   background-color: #fff;

@@ -27,7 +27,7 @@ const local: localizations = {
   electrician: "Electrician",
   peasant: "Peasant",
   autoCommunity: "Auto community",
-  company: "Auto community",
+  company: "Company",
   newsroom: "Newsroom",
   investors: "Investors",
   blog: "Blog",
