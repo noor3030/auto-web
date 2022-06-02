@@ -76,7 +76,7 @@
           </v-row>
         </v-col>
         <v-col cols="12" md="4">
-          <v-row v-if="$vuetify.breakpoint.md || $vuetify.breakpoint.xl">
+          <v-row v-if="$vuetify.breakpoint.md || $vuetify.breakpoint.xl || $vuetify.breakpoint.lg">
             <v-btn text flat
               ><v-img src="../assets/play.svg" max-width="250"></v-img
             ></v-btn>
@@ -90,17 +90,32 @@
             justify="center"
             class="pt-8"
           >
-            <v-btn icon flat class="mx-5"><v-img src="../assets/play-logo.svg" max-width="50"></v-img
+            <v-btn icon flat class="mx-5"
+              ><v-img src="../assets/play-logo.svg" max-width="50"></v-img
             ></v-btn>
             <v-btn icon flat>
               <v-img src="../assets/apple-logo.svg" max-width="50"></v-img>
             </v-btn>
-            </v-row
-          >
+          </v-row>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col> <p class="grey--text">Auto Technologies Inc 2022</p></v-col>
+      <v-row justify="center">
+        <v-col cols="12" md="3"> <p class="grey--text">Auto Technologies Inc 2022</p></v-col>
+        <v-col cols="12" md="3"
+          ><v-btn text to="/privacy_policy">
+            <p class="grey--text">{{ $t("privacyPolicy") }}</p>
+          </v-btn></v-col
+        >
+        <v-col cols="12" md="3"
+          ><v-btn text to="/terms">
+            <p class="grey--text">{{ $t("termsAndConditions") }}</p>
+          </v-btn></v-col
+        >
+        <v-col cols="12" md="3"
+          ><v-btn text>
+            <p class="grey--text">{{ $t("startUsingTheApp") }}</p>
+          </v-btn></v-col
+        >
       </v-row>
     </v-col>
   </v-footer>
@@ -185,7 +200,6 @@ a:link {
 @media screen and (max-width: 600px) {
   .app-name {
     font-size: 50px;
-   
   }
 }
 </style>

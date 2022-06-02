@@ -94,7 +94,7 @@
       <v-col cols="12" md="4">
         <v-card flat color="#eef3fe">
           <v-card-actions class="justify-center">
-            <v-img src="../assets/peasant.svg" max-width="200"></v-img>
+            <v-img src="../assets/peasant.svg" max-width="200" height="199"></v-img>
           </v-card-actions>
 
           <v-card-title class="justify-center">

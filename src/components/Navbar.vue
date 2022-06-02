@@ -1,6 +1,6 @@
 <template>
   <v-app-bar color="#eef3fe">
-    <v-row v-if="$vuetify.breakpoint.xl">
+    <v-row v-if="$vuetify.breakpoint.xl || $vuetify.breakpoint.lg">
       <v-btn color="#000" text rounded class="hide-element">
         <v-icon v-if="$vuetify.rtl === true">mdi-chevron-right</v-icon>
         <v-icon v-else>mdi-chevron-left </v-icon>
@@ -21,7 +21,7 @@
         {{ $t("termsAndConditions") }}
       </v-btn>
     </v-row>
-    <v-row v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm">
+    <v-row v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm ">
       <v-dialog
         v-model="navDialog"
         fullscreen
