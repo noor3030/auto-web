@@ -93,14 +93,13 @@
               $vuetify.breakpoint.lg
             "
           >
-            <v-btn text flat
+            <v-btn text flat 
               ><v-img src="../assets/play.svg" max-width="250"></v-img
             ></v-btn>
             <v-btn text flat>
               <v-img src="../assets/store.svg" max-width="200"></v-img>
             </v-btn>
-            ></v-row
-          >
+          </v-row>
           <v-row
             v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
             justify="center"
@@ -125,7 +124,7 @@
           </v-btn></v-col
         >
         <v-col cols="12" md="3"
-          ><v-btn text :href="link.termsAndConditions" target="_blank">
+          ><v-btn text to="/terms">
             <p class="grey--text">{{ $t("termsAndConditions") }}</p>
           </v-btn></v-col
         >

@@ -17,7 +17,7 @@
       >
         {{ $t("privacyPolicy") }}
       </v-btn>
-      <v-btn color="#222222" text :href="conditions" rounded class="hide-element">
+      <v-btn color="#222222" text to="/terms" rounded class="hide-element">
         {{ $t("termsAndConditions") }}
       </v-btn>
     </v-row>

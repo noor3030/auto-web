@@ -7,7 +7,7 @@ interface localizations extends social {
   youtube: string;
   twitter: string;
   gmail: string;
-  termsAndConditions: string;
+
   phoneNumber: string;
 }
 
@@ -17,7 +17,7 @@ const links: localizations = {
   youtube: "https://www.youtube.com/AutoDemandApp",
   twitter: "https://www.twitter.com/AutoDemandApp",
   gmail: "autodemandapp@gmail.com",
-  termsAndConditions: "https://autodemad.app/terms",
+ 
   phoneNumber: "07700000000",
 };
 export default links
