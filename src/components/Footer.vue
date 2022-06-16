@@ -13,11 +13,21 @@
       <v-row class="pb-16 pt-16" justify="space-between">
         <v-col cols="12" md="4">
           <v-row justify="space-between" class="pa-0">
-            <v-btn icon><v-icon color="#fff">mdi-facebook</v-icon></v-btn>
-            <v-btn icon><v-icon color="#fff">mdi-twitter</v-icon></v-btn>
-            <v-btn icon><v-icon color="#fff">mdi-youtube</v-icon></v-btn>
-            <v-btn icon><v-icon color="#fff">mdi-linkedin </v-icon></v-btn>
-            <v-btn icon><v-icon color="#fff">mdi-instagram</v-icon></v-btn>
+            <v-btn icon :href="link.facebook" target="_blank"
+              ><v-icon color="#fff">mdi-facebook</v-icon></v-btn
+            >
+            <v-btn icon :href="link.twitter" target="_blank"
+              ><v-icon color="#fff">mdi-twitter</v-icon></v-btn
+            >
+            <v-btn icon :href="link.youtube" target="_blank"
+              ><v-icon color="#fff">mdi-youtube</v-icon></v-btn
+            >
+            <v-btn icon :href="link.instagram" target="_blank"
+              ><v-icon color="#fff">mdi-instagram</v-icon></v-btn
+            >
+            <v-btn icon :href="link.gmail" target="_blank"
+              ><v-icon color="#fff">mdi-gmail</v-icon></v-btn
+            >
           </v-row>
         </v-col>
         <v-col cols="12" md="4" class="lang-col">
@@ -76,7 +86,13 @@
           </v-row>
         </v-col>
         <v-col cols="12" md="4">
-          <v-row v-if="$vuetify.breakpoint.md || $vuetify.breakpoint.xl || $vuetify.breakpoint.lg">
+          <v-row
+            v-if="
+              $vuetify.breakpoint.md ||
+              $vuetify.breakpoint.xl ||
+              $vuetify.breakpoint.lg
+            "
+          >
             <v-btn text flat
               ><v-img src="../assets/play.svg" max-width="250"></v-img
             ></v-btn>
@@ -100,14 +116,16 @@
         </v-col>
       </v-row>
       <v-row justify="center">
-        <v-col cols="12" md="3"> <p class="grey--text">Auto Technologies Inc 2022</p></v-col>
+        <v-col cols="12" md="3">
+          <p class="grey--text">Auto Technologies Inc 2022</p></v-col
+        >
         <v-col cols="12" md="3"
           ><v-btn text to="/privacy_policy">
             <p class="grey--text">{{ $t("privacyPolicy") }}</p>
           </v-btn></v-col
         >
         <v-col cols="12" md="3"
-          ><v-btn text to="/terms">
+          ><v-btn text :href="link.termsAndConditions" target="_blank">
             <p class="grey--text">{{ $t("termsAndConditions") }}</p>
           </v-btn></v-col
         >
@@ -124,6 +142,7 @@
 <script lang="ts">
 import Vue from "vue";
 import FooterInfo from "@/components/FooterInfo.vue";
+import links from "../social";
 export default Vue.extend({
   methods: {
     changeLanguage(item: { language: string; rtl: boolean; title: string }) {
@@ -139,6 +158,7 @@ export default Vue.extend({
         { language: "ar", rtl: true, title: "العربية" },
         { language: "en", rtl: false, title: "English" },
       ],
+      link: links,
     };
   },
   components: {
