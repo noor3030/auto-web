@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="#000" class="mt-16">
+  <v-footer color="#222222" class="mt-16">
     <v-col class="footer">
       <v-row class="pb-10">
         <h1 class="white--text pa-0 app-name">{{ $t("appName") }}</h1>
@@ -45,7 +45,7 @@
                     icon
                     @click="languageDialog = false"
                     x-large
-                    color="#000"
+                    color="#222222"
                   >
                     <v-icon x-large>mdi-close</v-icon>
                   </v-btn>

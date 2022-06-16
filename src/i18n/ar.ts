@@ -43,7 +43,10 @@ const local: localizations = {
   aboutAuto: "حول اوتو",
   chooseYourLanguage: "اختر لغتك",
   safety: "السلامة",
-  diversity: "التنوع وعدم التمييز"
+  diversity: "التنوع وعدم التمييز",
+  hat: "عامل",
+  delivery: "دليفري",
+  house: "خدمات منزلية"
 };
 
 export default local;

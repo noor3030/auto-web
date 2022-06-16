@@ -43,4 +43,7 @@ export interface VuetifyLocale {
     chooseYourLanguage:string
     safety:string
     diversity:string
+    hat:string
+    delivery:string
+    house:string
   }

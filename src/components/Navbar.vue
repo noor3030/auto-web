@@ -1,7 +1,7 @@
 <template>
-  <v-app-bar color="#eef3fe">
+  <v-app-bar >
     <v-row v-if="$vuetify.breakpoint.xl || $vuetify.breakpoint.lg">
-      <v-btn color="#000" text rounded class="hide-element">
+      <v-btn color="#222222" text rounded class="hide-element">
         <v-icon v-if="$vuetify.rtl === true">mdi-chevron-right</v-icon>
         <v-icon v-else>mdi-chevron-left </v-icon>
 
@@ -9,7 +9,7 @@
       </v-btn>
 
       <v-btn
-        color="#000"
+        color="#222222"
         text
         to="/privacy_policy"
         rounded
@@ -17,7 +17,7 @@
       >
         {{ $t("privacyPolicy") }}
       </v-btn>
-      <v-btn color="#000" text to="/terms" rounded class="hide-element">
+      <v-btn color="#222222" text to="/terms" rounded class="hide-element">
         {{ $t("termsAndConditions") }}
       </v-btn>
     </v-row>
@@ -29,18 +29,18 @@
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn v-bind="attrs" v-on="on" icon>
-            <v-icon medium class="ms-1" color="#000">mdi-chevron-down </v-icon>
+            <v-icon medium class="ms-1" color="#222222">mdi-chevron-down </v-icon>
           </v-btn>
         </template>
         <v-card color="#eef3fe">
           <div class="pa-16 text-center">
-            <v-btn icon @click="navDialog = false" x-large color="#000">
+            <v-btn icon @click="navDialog = false" x-large color="#222222">
               <v-icon x-large>mdi-close</v-icon>
             </v-btn>
           </div>
           <v-row align="center" justify="center">
             <v-col align-self="center" cols="12">
-              <v-btn color="#000" text rounded>
+              <v-btn color="#222222" text rounded>
                 <v-icon v-if="$vuetify.rtl === true" class="d-none d-sm-flex"
                   >mdi-chevron-right</v-icon
                 >
@@ -52,12 +52,12 @@
               </v-btn>
             </v-col>
             <v-col align-self="center" cols="12">
-              <v-btn color="#000" text to="/privacy_policy" rounded>
+              <v-btn color="#222222" text to="/privacy_policy" rounded>
                 {{ $t("privacyPolicy") }}
               </v-btn></v-col
             >
             <v-col align-self="center" cols="12"
-              ><v-btn color="#000" text to="/terms" rounded>
+              ><v-btn color="#222222" text to="/terms" rounded>
                 {{ $t("termsAndConditions") }}
               </v-btn></v-col
             >
@@ -75,12 +75,12 @@
       <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on" rounded text>
           <span class="d-none d-sm-flex">{{ $t("language") }}</span>
-          <v-icon medium class="ms-1" color="#000">mdi-web</v-icon>
+          <v-icon medium class="ms-1" color="#222222">mdi-web</v-icon>
         </v-btn>
       </template>
       <v-card color="#eef3fe"> 
         <div class="pa-16 text-center">
-          <v-btn icon @click="languageDialog = false" x-large color="#000">
+          <v-btn icon @click="languageDialog = false" x-large color="#222222">
             <v-icon x-large>mdi-close</v-icon>
           </v-btn>
         </div>

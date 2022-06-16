@@ -42,6 +42,9 @@ const local: localizations = {
   aboutAuto: "About Auto",
   chooseYourLanguage: "Choose your language",
   safety: "Safety",
-  diversity: "Diversity and inclusion"
+  diversity: "Diversity and inclusion",
+  hat: "Worker",
+  delivery: "Delivery",
+  house: "Home Services",
 };
 export default local;

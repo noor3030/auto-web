@@ -18,9 +18,10 @@
           </v-col>
           <v-col cols="12" md="5">
             <v-img
-              src="../assets/Group 7281.svg"
+              src="../assets/Request Service.svg"
               width="400"
               class="phone-img d-sm-none d-md-flex"
+              style="border-radius: 20px"
             ></v-img>
           </v-col>
         </v-row>
@@ -29,7 +30,7 @@
     <v-col class="pa-16"
       ><v-row>
         <div>
-          <v-btn color="#000" dark fixed fab large class="d-none d-sm-block">
+          <v-btn color="#222222" dark fixed fab large class="d-none d-sm-block">
             <v-icon>mdi-phone</v-icon>
           </v-btn>
         </div></v-row
@@ -39,7 +40,7 @@
     <v-row>
       <div>
         <v-btn
-          color="#000"
+          color="#222222"
           dark
           large
           fab
@@ -71,7 +72,7 @@ export default Vue.extend({
 @import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat+Alternates&family=Montserrat:ital,wght@1,300&family=Nunito+Sans:wght@200&family=Orelega+One&family=Outfit&family=Tajawal:wght@500&display=swap");
 
 .nav {
-  background-color: #000;
+  background-color: #222222;
   height: 700px;
 }
 .container1 {
