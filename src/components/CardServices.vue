@@ -128,9 +128,7 @@
   </v-col>
 </template>
 <style>
-h1 {
-  padding: 20px;
-}
+
 
 @media screen and (min-width: 601px) {
   h1 {

@@ -30,7 +30,15 @@
     <v-col class="pa-16"
       ><v-row>
         <div>
-          <v-btn color="#222222" dark fixed fab large class="d-none d-sm-block">
+          <v-btn
+            color="#222222"
+            dark
+            fixed
+            fab
+            large
+            class="d-none d-sm-block pt-4"
+            :href="phone"
+          >
             <v-icon>mdi-phone</v-icon>
           </v-btn>
         </div></v-row
@@ -60,7 +68,13 @@ import Vue from "vue";
 import CardServices from "@/components/CardServices.vue";
 import Footer from "@/components/Footer.vue";
 import Navbar from "@/components/Navbar.vue";
+import links from "../social";
 export default Vue.extend({
+  data() {
+    return {
+      phone: links.phoneNumber,
+    };
+  },
   components: {
     CardServices,
     Footer,
@@ -81,7 +95,7 @@ export default Vue.extend({
 }
 h4,
 h1,
-p {
+p ,h3{
   font-family: "Tajawal", sans-serif;
   color: #434d5c;
 }
